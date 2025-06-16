@@ -1,5 +1,4 @@
-use venom;
-create database venom;
+use aaft;
 
 create table Employees(
     emp_id int not null primary key,
@@ -7,14 +6,22 @@ create table Employees(
     department_id int not null
     );
     
-insert into employees(emp_id,emp_name,department_id) values(1,"alice",10),(2,"bob",20),(3,"charlie",30),(4,"david",10),(5,"eve",40);
+insert into employees(emp_id,emp_name,department_id) values(1,"alice",10),
+    (2,"bob",20),
+    (3,"charlie",30),
+    (4,"david",10),
+    (5,"eve",40);
 
 create table Departments(
     department_id int not null primary key,
     department_name varchar(50)
     );
     
-insert into Departments(department_id,department_name) values(10,"hr"),(20,"finance"),(30,"it"),(40,"admin"),(50,"marketing");
+insert into Departments(department_id,department_name) values(10,"hr"),
+    (20,"finance"),
+    (30,"it"),
+    (40,"admin"),
+    (50,"marketing");
 
 create table Project(
     project_id int not null primary key,
@@ -22,7 +29,10 @@ create table Project(
     project_name varchar(20) not null
     );
     
-insert into Project(project_id,emp_id,project_name) values(101,1,"alpha"),(102,2,"beta"),(103,3,"gama"),(104,4,"delta");
+insert into Project(project_id,emp_id,project_name) values(101,1,"alpha"),
+    (102,2,"beta"),
+    (103,3,"gama"),
+    (104,4,"delta");
 
 #1.	Write a query to get Employee and Department details using join.
 
@@ -91,7 +101,7 @@ inner join Departments d on e.department_id = d.department_id group by d.departm
 
 select d.department_id, count(e.emp_id) as total_employees from employees e inner join 
 Departments d on e.department_id = d.department_id group by
- d.department_id having count(e.emp_id)>1;
+d.department_id having count(e.emp_id)>1;
 
 
 
