@@ -64,7 +64,7 @@ select*from books where author regexp "[A-Z]";
 
 #14.Write a query to find all books where the title starts with the letter 'P' and contains exactly two words using the REGEXP operator.
 
-select*from books where title regexp "^p..";
+SELECT*FROM books where title regexp '^P[[:alnum:]]* [[:alnum:]]+$';
 
 #15.Write a query to find all books where the title contains any special characters (e.g., '!', '@', '#', etc.) using the REGEXP operator.
 
