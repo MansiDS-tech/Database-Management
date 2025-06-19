@@ -34,7 +34,7 @@ select Region from Sales where (Quantity*UnitPrice)> 3000;
 
 #5.	Write a query to get the maximum quantity sold for each product.
 
-select ProductID,Quantity from Sales;
+select ProductID,sum(Quantity) as total_quan from Sales group by ProductID;
 
 #6.	Write a query to calculate the average quantity of products sold per region.
 
