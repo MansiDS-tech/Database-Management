@@ -1,1 +1,1 @@
-# MYSQL-ASSIGNMENT
+#Welcome to my MySQL learning repository! This project contains my personal notes, practice queries, and examples as I explore the fundamentals of MySQL, a powerful open-source relational database management system.
